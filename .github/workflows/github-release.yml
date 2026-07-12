@@ -60,7 +60,7 @@ jobs:
           fi
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         if: steps.tag.outputs.tag != ''
         with:
           ref: ${{ steps.tag.outputs.tag }}
